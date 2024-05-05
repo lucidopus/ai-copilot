@@ -66,3 +66,21 @@ uvicorn main:app --reload
   "calling_purpose": "Purpose of the call as an additional piece of context for the model goes here."
 }
 ```
+
+## Interact with the hosted API
+
+You can interact with the AI Copilot API using tools like cURL or Postman. Here's an example of how to get suggestions for a conversation:
+
+```bash
+curl -X 'POST' \
+  'https://convodroid.onrender.com/get_suggestions' \
+  -H 'accept: application/json' \
+  -H "X-API-Key: $CONVODROID_API_KEY" \
+  -H 'Content-Type: application/json' \
+  -d '{
+  'conversation_history': 'The history of the conversation goes here.',
+  'calling_purpose': 'Purpose of the call as an additional piece of context for the model goes here.'
+}'
+```
+
+For access to the Copilot API, please send a request for an API key to [send a request for an API key](mailto:harshilpatel30402@gmail.com).
