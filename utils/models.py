@@ -8,3 +8,12 @@ class Conversation(BaseModel):
     calling_purpose: str = Field(
         description="Purpose of the call",
     )
+
+
+class StreamingContent(BaseModel):
+    chunk_id: str = Field(
+        description="The chunk ID",
+    )
+    content: str = Field(
+        description="The streamed content",
+    )

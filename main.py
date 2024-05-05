@@ -2,16 +2,15 @@ import os
 
 import uvicorn
 from fastapi import FastAPI, HTTPException, Request, Security, Depends
-from fastapi.responses import HTMLResponse, FileResponse
+from fastapi.responses import HTMLResponse, FileResponse, StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.templating import Jinja2Templates
 from fastapi.security import APIKeyHeader
 
 from utils.config import API_KEY, API_NAME, origins
 from utils.enums import HttpStatusCode
-from utils.models import Conversation
+from utils.models import Conversation, StreamingContent
 from utils.pipelines import suggestions
-
 
 app = FastAPI(
     title=API_NAME,
@@ -70,7 +69,6 @@ async def get_api_key(api_key_header: str = Security(api_key_header)):
 @app.post(
     path="/get_suggestions",
     tags=["Model Endpoints"],
-    response_model=str,
     response_description="Successful Response",
     description="Get AI Summaries and Suggestions",
     name=API_NAME,
@@ -78,7 +76,9 @@ async def get_api_key(api_key_header: str = Security(api_key_header)):
 async def process(
     conversationRequest: Conversation, api_key: str = Depends(get_api_key)
 ):
-    return suggestions(conversationRequest)
+    return StreamingResponse(
+        suggestions(conversationRequest), media_type="text/event-stream"
+    )
 
 
 if __name__ == "__main__":
