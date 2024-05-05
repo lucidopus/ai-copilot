@@ -83,4 +83,4 @@ curl -X 'POST' \
 }'
 ```
 
-For access to the Copilot API, please send a request for an API key to [send a request for an API key](mailto:harshilpatel30402@gmail.com?subject=[Github]).
+For access to the AI Copilot API, please send a request for an API key to [harshilpatel30402@gmail.com](mailto:harshilpatel30402@gmail.com).
