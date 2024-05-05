@@ -75,12 +75,12 @@ You can interact with the AI Copilot API using tools like cURL or Postman. Here'
 curl -X 'POST' \
   'https://convodroid.onrender.com/get_suggestions' \
   -H 'accept: application/json' \
-  -H "X-API-Key: $CONVODROID_API_KEY" \
+  -H 'X-API-Key: <Your API KEY>' \
   -H 'Content-Type: application/json' \
   -d '{
-  'conversation_history': 'The history of the conversation goes here.',
+  "conversation_history': 'The history of the conversation goes here.',
   'calling_purpose': 'Purpose of the call as an additional piece of context for the model goes here.'
 }'
 ```
 
-For access to the AI Copilot API, please send a request for an API key to [harshilpatel30402@gmail.com](mailto:harshilpatel30402@gmail.com).
+For access to the AI Copilot API, please [send a request](mailto:harshilpatel30402@gmail.com?subject=Request%20for%20AI%20Copilot%20API%20Key) for an API key.
