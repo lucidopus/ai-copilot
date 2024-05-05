@@ -1,0 +1,12 @@
+__pycache__/
+.vscode/
+
+# Virtual Environments
+copilot/
+
+# Environment Variables
+.env
+
+# Test files
+**.ipynb
+test.py
