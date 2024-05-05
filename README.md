@@ -75,11 +75,11 @@ You can interact with the AI Copilot API using tools like cURL or Postman. Here'
 curl -X 'POST' \
   'https://convodroid.onrender.com/get_suggestions' \
   -H 'accept: application/json' \
-  -H 'X-API-Key: <YOUR_API_KEY>' \
+  -H 'X-API-Key: sk-6a14d62d325e4316adf36860c1231ef4e288d434e' \
   -H 'Content-Type: application/json' \
   -d '{
-  "conversation_history": "salesperson: Hello?\ncustomer: Hi, who is this?",
-  "calling_purpose": "To sell mattresses"
+  "conversation_history": "",
+  "calling_purpose": ""
 }'
 ```
 
