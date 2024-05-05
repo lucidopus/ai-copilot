@@ -78,8 +78,8 @@ curl -X 'POST' \
   -H 'X-API-Key: <YOUR_API_KEY>' \
   -H 'Content-Type: application/json' \
   -d '{
-  "conversation_history": "The history of the conversation goes here",
-  "calling_purpose": "Purpose of the call as an additional piece of context for the model goes here"
+  "conversation_history": "salesperson: Hello?\ncustomer: Hi, who is this?",
+  "calling_purpose": "To sell mattresses"
 }'
 ```
 
