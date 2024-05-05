@@ -63,6 +63,6 @@ uvicorn main:app --reload
 ```json
 {
   "conversation_history": "The history of the conversation goes here.",
-  "purpose": "Purpose of the call as an additional piece of context for the model goes here."
+  "calling_purpose": "Purpose of the call as an additional piece of context for the model goes here."
 }
 ```
