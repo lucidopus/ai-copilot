@@ -78,7 +78,16 @@ curl -X 'POST' \
   -H 'X-API-Key: <YOUR_API_KEY>' \
   -H 'Content-Type: application/json' \
   -d '{
-  "conversation_history": "",
+  "conversation_history": [
+      {
+        "role": "salesperson",
+        "content": ""
+      },
+      {
+        "role": "customer",
+        "content": ""
+      }
+    ],
   "calling_purpose": ""
 }'
 ```
