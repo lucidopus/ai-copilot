@@ -1,8 +1,17 @@
+from typing import List
+
 from pydantic import BaseModel, Field
+
+from utils.enums import MessageType
+
+
+class Utterance(BaseModel):
+    role: MessageType
+    content: str
 
 
 class Conversation(BaseModel):
-    conversation_history: str = Field(
+    conversation_history: List[Utterance] = Field(
         description="The conversation history",
     )
     calling_purpose: str = Field(

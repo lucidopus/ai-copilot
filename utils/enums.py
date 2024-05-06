@@ -7,3 +7,8 @@ class HttpStatusCode(Enum):
     UNAUTHORIZED: int = 401
     NOT_FOUND: int = 404
     INTERNAL_SERVER_ERROR: int = 500
+
+
+class MessageType(str, Enum):
+    CALLER = "salesperson"
+    PROSPECT = "customer"
